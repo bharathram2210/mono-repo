@@ -1,0 +1,22 @@
+{
+  "name": "mono-repo-react-node",
+  "version": "1.0.0",
+  "description": "this is a setup of fullstack application of react and node ",
+  "main": "index.js",
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "backend": "npm run start -w backend",
+    "frontend": "npm run dev -w frontend",
+    "start": "concurrently \"npm run build\" \"npm run backend\" \"npm run frontend\"  ",
+    "build": "npm run build -w frontend"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
+
