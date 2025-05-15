@@ -11,7 +11,7 @@ function App() {
   const [students, setStudents] = useState<Student[]>([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/students')
+    fetch('https://mono-repo-react-node.onrender.com/api/students')
       .then(response => response.json())
       .then((data: Student[]) => setStudents(data))
       .catch(error => console.error('Error fetching students:', error));
