@@ -1,7 +1,7 @@
-import Login from '../../feature/login';
+import Login from "../../feature/login";
 
 const LoginPage = () => {
-    return <Login />;
+  return <Login />;
 };
 
 export default LoginPage;

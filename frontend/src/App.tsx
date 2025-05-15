@@ -1,26 +1,26 @@
-import { RouterProvider } from 'react-router-dom';
-import routes from './routes/route';
-import { useState } from 'react';
-import { AlertProp, AuthUser } from './context/context-type';
-import { ThemeProvider } from '@mui/material/styles';
-import { theme } from './assets/theme/theme.ts';
-import { Context } from './context/context.ts';
+import { RouterProvider } from "react-router-dom";
+import routes from "./routes/route";
+import { useState } from "react";
+import type { AlertProp, AuthUser } from "./context/context-type";
+import { ThemeProvider } from "@mui/material/styles";
+import { theme } from "./assets/theme/theme.ts";
+import { Context } from "./context/context.ts";
 
 const App = () => {
-    const [user, setUser] = useState<AuthUser | null>(null);
-    const [alert, setAlert] = useState<AlertProp | null>({
-        open: false,
-        message: '',
-        severity: 'warning',
-    });
+  const [user, setUser] = useState<AuthUser | null>(null);
+  const [alert, setAlert] = useState<AlertProp | null>({
+    open: false,
+    message: "",
+    severity: "warning",
+  });
 
-    return (
-        <Context.Provider value={{ user, setUser, alert, setAlert }}>
-            <ThemeProvider theme={theme}>
-                <RouterProvider router={routes} />
-            </ThemeProvider>
-        </Context.Provider>
-    );
+  return (
+    <Context.Provider value={{ user, setUser, alert, setAlert }}>
+      <ThemeProvider theme={theme}>
+        <RouterProvider router={routes} />
+      </ThemeProvider>
+    </Context.Provider>
+  );
 };
 
 export default App;
@@ -30,14 +30,12 @@ export default App;
 // // const context = useContext(Context);
 // // const { alert } = context as ContextTypes;
 
-
 // import React, { useEffect, useState } from "react";
 // import {
 //     ComposableMap,
 //     Geographies,
 //     Geography,
 // } from "react-simple-maps";
-
 
 // // Example enrollment data (you can update this dynamically)
 // const enrollmentData: Record<string, number> = {
@@ -60,7 +58,7 @@ export default App;
 //     type: string;
 //     features: any[];
 //   };
-  
+
 // const App: React.FC = () => {
 //     const [geoData, setGeoData] = useState<GeoFeatureCollection | null>(null);
 

@@ -1,7 +1,7 @@
-import Dashboard from '../../feature/dashboard';
+import Dashboard from "../../feature/dashboard";
 
 const DashboardPage = () => {
-    return <Dashboard />;
+  return <Dashboard />;
 };
 
 export default DashboardPage;
